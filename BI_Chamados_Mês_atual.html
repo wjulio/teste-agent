@@ -1,0 +1,2838 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:x="urn:schemas-microsoft-com:office:excel"
+      xmlns="http://www.w3.org/TR/REC-html40">
+    <head>
+        <title>BI_Chamados_Mês_atual (Jira)</title>
+        <style type="text/css">
+         table {
+             mso-displayed-decimal-separator:"\,";
+             mso-displayed-thousand-separator:"\.";
+         }
+         body
+         {
+             margin: 0px;
+             font-size: 12px;
+             font-family: Arial, sans-serif;
+             color:black;
+         }
+
+        </style>
+        <META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+        <!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+        <!--
+             Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+             since Excel does not use or save the css files it is hardcoded here.
+           -->
+        <style>
+         @page
+         {
+             mso-page-orientation:landscape;
+             margin:.25in .25in .5in .25in;
+             mso-header-margin:.5in;
+             mso-footer-margin:.25in;
+             mso-footer-data:"&R&P of &N";
+             mso-horizontal-page-align:center;
+             mso-vertical-page-align:center;
+         }
+
+         td.issuekey,
+         td.issuetype,
+         td.status {
+             mso-style-parent: "";
+             mso-number-format: \@;
+             text-align: left;
+         }
+         br
+         {
+             mso-data-placement:same-cell;
+         }
+
+         td
+         {
+             vertical-align: top;
+         }
+        </style>
+
+        <!--[if gte mso 9]><xml>
+            <x:ExcelWorkbook>
+            <x:ExcelWorksheets>
+            <x:ExcelWorksheet>
+            <x:Name>general_report</x:Name>
+            <x:WorksheetOptions>
+            <x:Print>
+            <x:ValidPrinterInfo/>
+            </x:Print>
+            </x:WorksheetOptions>
+            </x:ExcelWorksheet>
+            </x:ExcelWorksheets>
+            </x:ExcelWorkbook>
+            </xml><![endif]-->
+    </head>
+    <body>
+
+        <table border="1">
+            <tr bgcolor="#0747a6" height="60">
+                <td colspan="14">
+                    <img src="https://jira.tic.fgv.br/jira-logo-scaled.png" width="223" height="60" border="0" alt="BI_Chamados_Mês_atual (Jira)">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="14">
+                    <a href="https://jira.tic.fgv.br/issues/?filter=19476" data-testid="filterNameHref">BI_Chamados_Mês_atual (Jira)</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="14">
+                    Exibindo 69 itens como em 26/08/2025 10:30.
+                </td>
+            </tr>
+        </table>
+
+        
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th scope="col" class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Chave
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-summary" data-id="summary">
+                            Resumo
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Responsável
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-reporter" data-id="reporter">
+                            Solicitante
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-status" data-id="status">
+                            Situação
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-created" data-id="created">
+                            Criado
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_10709" data-id="customfield_10709">
+                            % de Conclusão
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-updated" data-id="updated">
+                            Atualizado
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-duedate" data-id="duedate">
+                            Data para Ficar Pronto
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_13600" data-id="customfield_13600">
+                            [Grupo Responsável]
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_12119" data-id="customfield_12119">
+                            Tipo da Requisição
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_13400" data-id="customfield_13400">
+                            Tipo da demanda_SD
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-customfield_13666" data-id="customfield_13666">
+                            Demanda tipo
+                                                    </th>
+                                                
+                                                            <th scope="col" class="colHeaderLink headerrow-labels" data-id="labels">
+                            Rótulos
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow484099" rel="484099" data-issuekey="SDBI-1713" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1713" href="https://jira.tic.fgv.br/browse/SDBI-1713">SDBI-1713</a>
+</td>
+                                            <td class="summary"><p>
+                Botão de atualização para fluxo de dados a qualquer momento
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Bianca Peregrino Bomfim
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 19/08/2025 14:41 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 10:29 </td>
+                                            <td class="duedate">    22/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DO</td>
+                    </tr>
+
+
+                <tr id="issuerow482928" rel="482928" data-issuekey="SDBI-1709" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1709" href="https://jira.tic.fgv.br/browse/SDBI-1709">SDBI-1709</a>
+</td>
+                                            <td class="summary"><p>
+                Habilitar mapa ArcGIS no Power BI
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Danilo Ferian Antunes
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 15/08/2025 18:06 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 10:29 </td>
+                                            <td class="duedate">    18/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_ESCOLAS</td>
+                    </tr>
+
+
+                <tr id="issuerow483603" rel="483603" data-issuekey="SDBI-1710" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1710" href="https://jira.tic.fgv.br/browse/SDBI-1710">SDBI-1710</a>
+</td>
+                                            <td class="summary"><p>
+                Atualização da planilha de carga no banco
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Bianca Peregrino Bomfim
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 18/08/2025 15:42 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 10:23 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DO</td>
+                    </tr>
+
+
+                <tr id="issuerow406541" rel="406541" data-issuekey="SDBI-1430" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1430" href="https://jira.tic.fgv.br/browse/SDBI-1430">SDBI-1430</a>
+</td>
+                                            <td class="summary"><p>
+                Criação de BI Dashboard - Financiamento Estudantil/Bolsa Restituível
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Rodrigo Pamplona Brochado
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 21/01/2025 13:51 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 10:14 </td>
+                                            <td class="duedate">    31/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow486654" rel="486654" data-issuekey="SDBI-1716" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1716" href="https://jira.tic.fgv.br/browse/SDBI-1716">SDBI-1716</a>
+</td>
+                                            <td class="summary"><p>
+                Arquivo para atualização do Cubo mySuite 25/08/2025
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Lucas Trajano Francisco
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Resolvido&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Resolvido&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.(%%green%%)&lt;/span&gt;" tabindex="0">Resolvido</span>    </td>
+                                            <td class="created"> 25/08/2025 13:25 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 09:25 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow480956" rel="480956" data-issuekey="SDBI-1707" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1707" href="https://jira.tic.fgv.br/browse/SDBI-1707">SDBI-1707</a>
+</td>
+                                            <td class="summary"><p>
+                Base: BI_DICOM
+    </p>
+</td>
+                                            <td class="assignee">            Automato
+    </td>
+                                            <td class="reporter">            Mariana Betine Figueiredo de Vasconcelos
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Pendente&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Isto foi gerado automaticamente pelo JIRA Service Desk durante a importação do fluxo de trabalho(%%red%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Pendente&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Isto foi gerado automaticamente pelo JIRA Service Desk durante a importação do fluxo de trabalho(%%red%%)&lt;/span&gt;" tabindex="0">Pendente</span>    </td>
+                                            <td class="created"> 13/08/2025 10:35 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 09:22 </td>
+                                            <td class="duedate">    26/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow481938" rel="481938" data-issuekey="SDBI-1708" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1708" href="https://jira.tic.fgv.br/browse/SDBI-1708">SDBI-1708</a>
+</td>
+                                            <td class="summary"><p>
+                Ajustaar etap de Rebuild de index do projeto IDE
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Wanderson Julio de Melo
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Resolvido&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Resolvido&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.(%%green%%)&lt;/span&gt;" tabindex="0">Resolvido</span>    </td>
+                                            <td class="created"> 14/08/2025 10:00 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 26/08/2025 09:12 </td>
+                                            <td class="duedate">    25/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda emergencial
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE, BI_IDE_PAGAMENTOS</td>
+                    </tr>
+
+
+                <tr id="issuerow362598" rel="362598" data-issuekey="SDBI-1175" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1175" href="https://jira.tic.fgv.br/browse/SDBI-1175">SDBI-1175</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão do campo &quot;área de conhecimento do curso&quot; na base BIP.tb_bi_ide_dados_oferta
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Mattheus Silva Alves
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em especificação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em especificação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em especificação</span>    </td>
+                                            <td class="created"> 30/08/2024 10:21 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:14 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow398441" rel="398441" data-issuekey="SDBI-1379" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1379" href="https://jira.tic.fgv.br/browse/SDBI-1379">SDBI-1379</a>
+</td>
+                                            <td class="summary"><p>
+                Criação de Base Detalhada IDE - Interessados, Inscritos e Matriculados
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Gabriela Maria da Conceição Silva
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em especificação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em especificação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em especificação</span>    </td>
+                                            <td class="created"> 20/12/2024 11:37 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:12 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow483911" rel="483911" data-issuekey="SDBI-1712" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1712" href="https://jira.tic.fgv.br/browse/SDBI-1712">SDBI-1712</a>
+</td>
+                                            <td class="summary"><p>
+                Dúvida sobre registros “(NI)” no NovoOferta
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Vinicius Ferreira Monteiro da Costa
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 19/08/2025 10:03 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:09 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow474469" rel="474469" data-issuekey="SDBI-1690" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1690" href="https://jira.tic.fgv.br/browse/SDBI-1690">SDBI-1690</a>
+</td>
+                                            <td class="summary"><p>
+                Duplicidade de Registro - Cubo NovoOferta
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 30/07/2025 14:56 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:08 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda emergencial
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow468313" rel="468313" data-issuekey="SDBI-1674" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1674" href="https://jira.tic.fgv.br/browse/SDBI-1674">SDBI-1674</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão de Dimensão - Cubo Corporativo
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 14/07/2025 14:20 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:07 </td>
+                                            <td class="duedate">    01/09/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Alteraração de Dashboard e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow340188" rel="340188" data-issuekey="SDBI-1036" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1036" href="https://jira.tic.fgv.br/browse/SDBI-1036">SDBI-1036</a>
+</td>
+                                            <td class="summary"><p>
+                Ausência de Dados Tipo de Impressão SIGA 1
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Rodrigo Queiroz de Souza Reis
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 21/06/2024 16:20 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:07 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666">    Demanda Planejada
+</td>
+                                            <td class="labels">    BI_AUDITORIA</td>
+                    </tr>
+
+
+                <tr id="issuerow467036" rel="467036" data-issuekey="SDBI-1670" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1670" href="https://jira.tic.fgv.br/browse/SDBI-1670">SDBI-1670</a>
+</td>
+                                            <td class="summary"><p>
+                Revisão da Medida - Valor Presente
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 09/07/2025 18:47 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 15:06 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow478402" rel="478402" data-issuekey="SDBI-1704" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1704" href="https://jira.tic.fgv.br/browse/SDBI-1704">SDBI-1704</a>
+</td>
+                                            <td class="summary"><p>
+                &quot;bibd.fgv.br&quot;, &quot;BI_PROCESSO_SELETIVO&quot;, [Query=&quot;SELECT * FROM vwProcessoSeletivoDadosBrutos
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Mattheus Silva Alves
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Resolvido&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Resolvido&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.(%%green%%)&lt;/span&gt;" tabindex="0">Resolvido</span>    </td>
+                                            <td class="created"> 07/08/2025 15:20 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 13:30 </td>
+                                            <td class="duedate">    20/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow404189" rel="404189" data-issuekey="SDBI-1411" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1411" href="https://jira.tic.fgv.br/browse/SDBI-1411">SDBI-1411</a>
+</td>
+                                            <td class="summary"><p>
+                Ajuste nos dados de bolsa do BI da SRA
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Rodrigo Pamplona Brochado
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 14/01/2025 11:05 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 13:05 </td>
+                                            <td class="duedate">    03/09/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Alteraração de Dashboard e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow485030" rel="485030" data-issuekey="SDBI-1715" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1715" href="https://jira.tic.fgv.br/browse/SDBI-1715">SDBI-1715</a>
+</td>
+                                            <td class="summary"><p>
+                Atualização Agendada
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Mariana Betine Figueiredo de Vasconcelos
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 20/08/2025 14:26 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 25/08/2025 12:01 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI-DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow452781" rel="452781" data-issuekey="SDBI-1631" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1631" href="https://jira.tic.fgv.br/browse/SDBI-1631">SDBI-1631</a>
+</td>
+                                            <td class="summary"><p>
+                Sistema de Acesso de Catracas
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Isabela Antunes de Siqueira
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 30/05/2025 10:22 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:43 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_ESCOLAS</td>
+                    </tr>
+
+
+                <tr id="issuerow445271" rel="445271" data-issuekey="SDBI-1603" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1603" href="https://jira.tic.fgv.br/browse/SDBI-1603">SDBI-1603</a>
+</td>
+                                            <td class="summary"><p>
+                Incluir campos de OPT IN e OPT OUT nas views do IDE
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Jéssica Ferreira Cardoso
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Liberado para execução&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Liberado para execução&lt;/span&gt;" tabindex="0">Liberado para execução</span>    </td>
+                                            <td class="created"> 12/05/2025 15:32 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:42 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow405734" rel="405734" data-issuekey="SDBI-1423" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1423" href="https://jira.tic.fgv.br/browse/SDBI-1423">SDBI-1423</a>
+</td>
+                                            <td class="summary"><p>
+                Auditoria FGV - Títulos Quitados sem Número de Fatura e Cod da Transação -View CuboAuditoria vwPlanoFinanceiroAlunoCurso
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Rodrigo Queiroz de Souza Reis
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 17/01/2025 13:28 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:42 </td>
+                                            <td class="duedate">    12/09/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_AUDITORIA</td>
+                    </tr>
+
+
+                <tr id="issuerow430845" rel="430845" data-issuekey="SDBI-1529" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1529" href="https://jira.tic.fgv.br/browse/SDBI-1529">SDBI-1529</a>
+</td>
+                                            <td class="summary"><p>
+                Auditoria FGV - Estruturação dos Dados de Compras - API
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Rodrigo Queiroz de Souza Reis
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 28/03/2025 15:46 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:40 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_AUDITORIA</td>
+                    </tr>
+
+
+                <tr id="issuerow404315" rel="404315" data-issuekey="SDBI-1412" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1412" href="https://jira.tic.fgv.br/browse/SDBI-1412">SDBI-1412</a>
+</td>
+                                            <td class="summary"><p>
+                API do FilaH &gt; BI Atendimento
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Rodrigo Pamplona Brochado
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 14/01/2025 11:51 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:33 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Dashboards e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow389157" rel="389157" data-issuekey="SDBI-1317" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1317" href="https://jira.tic.fgv.br/browse/SDBI-1317">SDBI-1317</a>
+</td>
+                                            <td class="summary"><p>
+                Criação de automação/aplicação: do sharepoint para o banco &#39;DBM&#39;
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Carlos Eduardo Santos Coutinho
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 19/11/2024 10:54 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:33 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow361246" rel="361246" data-issuekey="SDBI-1168" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1168" href="https://jira.tic.fgv.br/browse/SDBI-1168">SDBI-1168</a>
+</td>
+                                            <td class="summary"><p>
+                Criação da view &quot;DOCENTES_FGV&quot;
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Carlos Eduardo Santos Coutinho
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 26/08/2024 20:16 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:29 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow357268" rel="357268" data-issuekey="SDBI-1141" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1141" href="https://jira.tic.fgv.br/browse/SDBI-1141">SDBI-1141</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão da Base [dbo].[FGV_BI_OEG] no banco DBM
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Carlos Eduardo Santos Coutinho
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 14/08/2024 16:04 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:29 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow410645" rel="410645" data-issuekey="SDBI-1449" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1449" href="https://jira.tic.fgv.br/browse/SDBI-1449">SDBI-1449</a>
+</td>
+                                            <td class="summary"><p>
+                Criação da View Eventos (even3 e TS Eventos)
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Carlos Eduardo Santos Coutinho
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 31/01/2025 16:42 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 11:29 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow478197" rel="478197" data-issuekey="SDBI-1703" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1703" href="https://jira.tic.fgv.br/browse/SDBI-1703">SDBI-1703</a>
+</td>
+                                            <td class="summary"><p>
+                Verificação de informação incorreta no fluxo de dados para o dashboard
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Bianca Peregrino Bomfim
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 07/08/2025 11:18 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 10:04 </td>
+                                            <td class="duedate">    12/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Alteraração de Dashboard e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DO</td>
+                    </tr>
+
+
+                <tr id="issuerow471265" rel="471265" data-issuekey="SDBI-1683" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1683" href="https://jira.tic.fgv.br/browse/SDBI-1683">SDBI-1683</a>
+</td>
+                                            <td class="summary"><p>
+                BI - PORTAL DE TRANSPARÊNCIA DO &gt; SRA &gt; INDICADORES DE ALUNO
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Elzinara Conceição de Almeida
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 22/07/2025 13:25 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 08:44 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Alteraração de Dashboard e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow484395" rel="484395" data-issuekey="SDBI-1714" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1714" href="https://jira.tic.fgv.br/browse/SDBI-1714">SDBI-1714</a>
+</td>
+                                            <td class="summary"><p>
+                Preciso disponibilizar acesso a PowerBI no Projeto 087-25 para homologação pelo cliente
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Tiago Nascimento Borges Slavov
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Pendente&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Isto foi gerado automaticamente pelo JIRA Service Desk durante a importação do fluxo de trabalho(%%red%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Pendente&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Isto foi gerado automaticamente pelo JIRA Service Desk durante a importação do fluxo de trabalho(%%red%%)&lt;/span&gt;" tabindex="0">Pendente</span>    </td>
+                                            <td class="created"> 19/08/2025 17:18 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 22/08/2025 08:41 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_PROJETOS</td>
+                    </tr>
+
+
+                <tr id="issuerow432080" rel="432080" data-issuekey="SDBI-1536" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1536" href="https://jira.tic.fgv.br/browse/SDBI-1536">SDBI-1536</a>
+</td>
+                                            <td class="summary"><p>
+                BI DSPACE: ajustes na coleta e no dashboard do Dspace
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Edmilson José Boregas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Homologação&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%#14718c%%)&lt;/span&gt;" tabindex="0">Em Homologação</span>    </td>
+                                            <td class="created"> 01/04/2025 14:49 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 21/08/2025 15:58 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_BIBLIOTECAS</td>
+                    </tr>
+
+
+                <tr id="issuerow483632" rel="483632" data-issuekey="SDBI-1711" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1711" href="https://jira.tic.fgv.br/browse/SDBI-1711">SDBI-1711</a>
+</td>
+                                            <td class="summary"><p>
+                Arquivo para atualização do Cubo mySuite 18/08/2025
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Lucas Trajano Francisco
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 18/08/2025 17:04 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 21/08/2025 11:58 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow476047" rel="476047" data-issuekey="SDBI-1697" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1697" href="https://jira.tic.fgv.br/browse/SDBI-1697">SDBI-1697</a>
+</td>
+                                            <td class="summary"><p>
+                Cubo de Disciplina
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 04/08/2025 10:41 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 20/08/2025 18:10 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow433630" rel="433630" data-issuekey="SDBI-1551" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1551" href="https://jira.tic.fgv.br/browse/SDBI-1551">SDBI-1551</a>
+</td>
+                                            <td class="summary"><p>
+                Dashboard FGV DIGITAL CLASS
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Vanessa Terumi Mizuta
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 04/04/2025 14:53 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 20/08/2025 18:09 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DTI</td>
+                    </tr>
+
+
+                <tr id="issuerow434875" rel="434875" data-issuekey="SDBI-1557" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1557" href="https://jira.tic.fgv.br/browse/SDBI-1557">SDBI-1557</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão de Informações do plano financeiro
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 08/04/2025 15:37 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 20/08/2025 18:09 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow432102" rel="432102" data-issuekey="SDBI-1535" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1535" href="https://jira.tic.fgv.br/browse/SDBI-1535">SDBI-1535</a>
+</td>
+                                            <td class="summary"><p>
+                View do Lyceum
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Gabriella do Nascimento Pinheiro
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 01/04/2025 13:47 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 20/08/2025 18:07 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow451091" rel="451091" data-issuekey="SDBI-1622" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1622" href="https://jira.tic.fgv.br/browse/SDBI-1622">SDBI-1622</a>
+</td>
+                                            <td class="summary"><p>
+                Acesso aos dados FGV_Curriculo
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Patricia Fiuza Moreira
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 27/05/2025 11:47 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 20/08/2025 18:02 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_EESP, BI_ESCOLAS</td>
+                    </tr>
+
+
+                <tr id="issuerow415568" rel="415568" data-issuekey="SDBI-1469" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1469" href="https://jira.tic.fgv.br/browse/SDBI-1469">SDBI-1469</a>
+</td>
+                                            <td class="summary"><p>
+                Acesso a base de dados - FGV AGRO
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Gabriela Maria da Conceição Silva
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 13/02/2025 11:27 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 20/08/2025 18:01 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow463473" rel="463473" data-issuekey="SDBI-1662" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1662" href="https://jira.tic.fgv.br/browse/SDBI-1662">SDBI-1662</a>
+</td>
+                                            <td class="summary"><p>
+                Criação fluxos com dados do Lyceum
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Rita de Cássia Rufino Mattana
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 30/06/2025 16:40 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 19/08/2025 14:53 </td>
+                                            <td class="duedate">    15/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Dashboards e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow455578" rel="455578" data-issuekey="SDBI-1638" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1638" href="https://jira.tic.fgv.br/browse/SDBI-1638">SDBI-1638</a>
+</td>
+                                            <td class="summary"><p>
+                Conflito no relatorio Reports_REPORTBI
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Pedro Henrique Gomes da Silva
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Liberado para execução&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Liberado para execução&lt;/span&gt;" tabindex="0">Liberado para execução</span>    </td>
+                                            <td class="created"> 06/06/2025 11:47 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 19/08/2025 09:20 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DRH</td>
+                    </tr>
+
+
+                <tr id="issuerow398574" rel="398574" data-issuekey="SDBI-1378" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1378" href="https://jira.tic.fgv.br/browse/SDBI-1378">SDBI-1378</a>
+</td>
+                                            <td class="summary"><p>
+                Corrigir duplicidade de registros na classificação de gerações
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Marcelo Veríssimo dos Santos
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 20/12/2024 10:51 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 18/08/2025 17:04 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_BIBLIOTECAS</td>
+                    </tr>
+
+
+                <tr id="issuerow479982" rel="479982" data-issuekey="SDBI-1706" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1706" href="https://jira.tic.fgv.br/browse/SDBI-1706">SDBI-1706</a>
+</td>
+                                            <td class="summary"><p>
+                Arquivo para atualização do Cubo mySuite 11/08/2025
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Lucas Trajano Francisco
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 11/08/2025 16:18 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 14/08/2025 11:52 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow479227" rel="479227" data-issuekey="SDBI-1705" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1705" href="https://jira.tic.fgv.br/browse/SDBI-1705">SDBI-1705</a>
+</td>
+                                            <td class="summary"><p>
+                Erro na atualização automática do dashboard  [DICOM - GIM] PULSO
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Mattheus Silva Alves
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 08/08/2025 16:20 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 14/08/2025 10:58 </td>
+                                            <td class="duedate">    11/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow478075" rel="478075" data-issuekey="SDBI-1701" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1701" href="https://jira.tic.fgv.br/browse/SDBI-1701">SDBI-1701</a>
+</td>
+                                            <td class="summary"><p>
+                Atualização de Base | Contas Contábeis
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 07/08/2025 10:08 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 14/08/2025 10:45 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow451759" rel="451759" data-issuekey="SDBI-1623" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1623" href="https://jira.tic.fgv.br/browse/SDBI-1623">SDBI-1623</a>
+</td>
+                                            <td class="summary"><p>
+                atualização do cubo de BI com base em novas views do Repositório Digital
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Raphael Xavier
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 28/05/2025 14:11 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 13/08/2025 11:09 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_BIBLIOTECAS</td>
+                    </tr>
+
+
+                <tr id="issuerow455583" rel="455583" data-issuekey="SDBI-1639" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1639" href="https://jira.tic.fgv.br/browse/SDBI-1639">SDBI-1639</a>
+</td>
+                                            <td class="summary"><p>
+                Adicionar campo &quot;Praça Agente de Vendas&quot; nas views detalhadas IDE DICOM
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Jéssica Ferreira Cardoso
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 06/06/2025 12:31 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 13/08/2025 10:51 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow463562" rel="463562" data-issuekey="SDBI-1663" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1663" href="https://jira.tic.fgv.br/browse/SDBI-1663">SDBI-1663</a>
+</td>
+                                            <td class="summary"><p>
+                Alterar do cubo Aluno - Responsável Financeiro 
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Robert Bessa dos Santos
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 30/06/2025 17:55 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 13/08/2025 10:51 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Cubos OLAP
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow468783" rel="468783" data-issuekey="SDBI-1676" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1676" href="https://jira.tic.fgv.br/browse/SDBI-1676">SDBI-1676</a>
+</td>
+                                            <td class="summary"><p>
+                Cubo Disciplinas - Inclusão de Dimenões
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 15/07/2025 15:14 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 13/08/2025 10:51 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow469952" rel="469952" data-issuekey="SDBI-1678" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1678" href="https://jira.tic.fgv.br/browse/SDBI-1678">SDBI-1678</a>
+</td>
+                                            <td class="summary"><p>
+                EESP Notas Teams: criar uma carga de dados com os dados do sharepoint
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Adriana Jacoto Unger
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 17/07/2025 17:15 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 13/08/2025 10:51 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_EESP</td>
+                    </tr>
+
+
+                <tr id="issuerow478088" rel="478088" data-issuekey="SDBI-1702" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1702" href="https://jira.tic.fgv.br/browse/SDBI-1702">SDBI-1702</a>
+</td>
+                                            <td class="summary"><p>
+                Arquivo para atualização do Cubo mySuite 07-08-2025
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Vinicius Ferreira Monteiro da Costa
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 07/08/2025 10:33 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 12/08/2025 15:41 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow458536" rel="458536" data-issuekey="SDBI-1649" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1649" href="https://jira.tic.fgv.br/browse/SDBI-1649">SDBI-1649</a>
+</td>
+                                            <td class="summary"><p>
+                Dashboard Indicadores de Atendimento - Automação carga Fila H
+    </p>
+</td>
+                                            <td class="assignee">    <em>Sem responsável</em>
+</td>
+                                            <td class="reporter">            Rita de Cássia Rufino Mattana
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Cancelado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Chamado cancelado.(%%black%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Cancelado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Chamado cancelado.(%%black%%)&lt;/span&gt;" tabindex="0">Cancelado</span>    </td>
+                                            <td class="created"> 13/06/2025 11:34 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 12/08/2025 14:11 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow424848" rel="424848" data-issuekey="SDBI-1503" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1503" href="https://jira.tic.fgv.br/browse/SDBI-1503">SDBI-1503</a>
+</td>
+                                            <td class="summary"><p>
+                Solicito atualização do relatório de ZOOM ROOMS
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Vanessa Terumi Mizuta
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-inprogress jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Em Execução&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;(%%blue%%)&lt;/span&gt;" tabindex="0">Em Execução</span>    </td>
+                                            <td class="created"> 14/03/2025 13:02 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 12/08/2025 10:43 </td>
+                                            <td class="duedate">    29/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Alteraração de Dashboard e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_CTE</td>
+                    </tr>
+
+
+                <tr id="issuerow475707" rel="475707" data-issuekey="SDBI-1693" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1693" href="https://jira.tic.fgv.br/browse/SDBI-1693">SDBI-1693</a>
+</td>
+                                            <td class="summary"><p>
+                Concessão de Acesso (nova colaborada)
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Carlos Eduardo Santos Coutinho
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 01/08/2025 14:34 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 12/08/2025 10:03 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow475798" rel="475798" data-issuekey="SDBI-1694" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1694" href="https://jira.tic.fgv.br/browse/SDBI-1694">SDBI-1694</a>
+</td>
+                                            <td class="summary"><p>
+                Planilha de Centro de Custo
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 01/08/2025 17:25 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 12/08/2025 10:02 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow416067" rel="416067" data-issuekey="SDBI-1473" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1473" href="https://jira.tic.fgv.br/browse/SDBI-1473">SDBI-1473</a>
+</td>
+                                            <td class="summary"><p>
+                Auditoria FGV - Títulos Duplicados na View vwPlanoFinanceiroALunoCurso
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Rodrigo Queiroz de Souza Reis
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 14/02/2025 14:39 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 11/08/2025 12:00 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_AUDITORIA</td>
+                    </tr>
+
+
+                <tr id="issuerow477864" rel="477864" data-issuekey="SDBI-1700" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1700" href="https://jira.tic.fgv.br/browse/SDBI-1700">SDBI-1700</a>
+</td>
+                                            <td class="summary"><p>
+                Atualização Automática - Acadêmico e Financeiro
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 06/08/2025 16:26 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 11/08/2025 11:16 </td>
+                                            <td class="duedate">    06/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Alteraração de Dashboard e Visuais
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow476034" rel="476034" data-issuekey="SDBI-1695" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1695" href="https://jira.tic.fgv.br/browse/SDBI-1695">SDBI-1695</a>
+</td>
+                                            <td class="summary"><p>
+                Atualização Agendada
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Mariana Betine Figueiredo de Vasconcelos
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 04/08/2025 10:29 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 08/08/2025 10:41 </td>
+                                            <td class="duedate">    04/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow474450" rel="474450" data-issuekey="SDBI-1689" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1689" href="https://jira.tic.fgv.br/browse/SDBI-1689">SDBI-1689</a>
+</td>
+                                            <td class="summary"><p>
+                Correção de Relacionamento - Cubo Financeiro
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 30/07/2025 14:22 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 07/08/2025 15:03 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda emergencial
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow459533" rel="459533" data-issuekey="SDBI-1654" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1654" href="https://jira.tic.fgv.br/browse/SDBI-1654">SDBI-1654</a>
+</td>
+                                            <td class="summary"><p>
+                Cubo Financeiro - Ajuste &quot;Valor Orçado&quot;
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 17/06/2025 09:47 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 07/08/2025 15:00 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow474910" rel="474910" data-issuekey="SDBI-1691" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1691" href="https://jira.tic.fgv.br/browse/SDBI-1691">SDBI-1691</a>
+</td>
+                                            <td class="summary"><p>
+                DADOS MATRICULA FGV AGRO
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Gabriella do Nascimento Pinheiro
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 31/07/2025 11:41 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 07/08/2025 14:57 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow475137" rel="475137" data-issuekey="SDBI-1692" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1692" href="https://jira.tic.fgv.br/browse/SDBI-1692">SDBI-1692</a>
+</td>
+                                            <td class="summary"><p>
+                Retirada de Acesso 
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 31/07/2025 17:34 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 07/08/2025 13:45 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow476407" rel="476407" data-issuekey="SDBI-1699" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1699" href="https://jira.tic.fgv.br/browse/SDBI-1699">SDBI-1699</a>
+</td>
+                                            <td class="summary"><p>
+                Acesso ao PowerBI
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Sonia Miryam Caldas Quiroga Foggiato
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 04/08/2025 15:30 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 07/08/2025 10:04 </td>
+                                            <td class="duedate">    04/08/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DTI</td>
+                    </tr>
+
+
+                <tr id="issuerow376285" rel="376285" data-issuekey="SDBI-1247" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1247" href="https://jira.tic.fgv.br/browse/SDBI-1247">SDBI-1247</a>
+</td>
+                                            <td class="summary"><p>
+                Incluir campos de OPT IN e OPT OUT na view dadosbrutos
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Jéssica Ferreira Cardoso
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 10/10/2024 11:58 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 06/08/2025 14:39 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow451034" rel="451034" data-issuekey="SDBI-1621" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1621" href="https://jira.tic.fgv.br/browse/SDBI-1621">SDBI-1621</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão de Dimensões - Cubo Captação
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 27/05/2025 09:28 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 04/08/2025 18:06 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow473321" rel="473321" data-issuekey="SDBI-1687" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1687" href="https://jira.tic.fgv.br/browse/SDBI-1687">SDBI-1687</a>
+</td>
+                                            <td class="summary"><p>
+                Incluir dash na atualização automática
+    </p>
+</td>
+                                            <td class="assignee">            Jonathan Domingos Ferreira
+    </td>
+                                            <td class="reporter">            Gabriela Maria da Conceição Silva
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 28/07/2025 11:37 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 04/08/2025 13:31 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_DICOM</td>
+                    </tr>
+
+
+                <tr id="issuerow371859" rel="371859" data-issuekey="SDBI-1225" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1225" href="https://jira.tic.fgv.br/browse/SDBI-1225">SDBI-1225</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão/Alteração Palavra Chave - Biblioteca - OJS
+    </p>
+</td>
+                                            <td class="assignee">    <em>Sem responsável</em>
+</td>
+                                            <td class="reporter">            Luciana Pereira da Silva
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Cancelado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Chamado cancelado.(%%black%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Cancelado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Chamado cancelado.(%%black%%)&lt;/span&gt;" tabindex="0">Cancelado</span>    </td>
+                                            <td class="created"> 27/09/2024 11:07 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 04/08/2025 11:25 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Manutenção Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_BIBLIOTECAS</td>
+                    </tr>
+
+
+                <tr id="issuerow476088" rel="476088" data-issuekey="SDBI-1698" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1698" href="https://jira.tic.fgv.br/browse/SDBI-1698">SDBI-1698</a>
+</td>
+                                            <td class="summary"><p>
+                Inclusão/Alteração Palavra Chave - Biblioteca - OJS
+    </p>
+</td>
+                                            <td class="assignee">            Wanderson Julio de Melo
+    </td>
+                                            <td class="reporter">            Luciana Pereira da Silva
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-default jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Backlog&lt;/span&gt;" tabindex="0">Backlog</span>    </td>
+                                            <td class="created"> 04/08/2025 11:23 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 04/08/2025 11:25 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Novos Serviços de BI ou Estruturas de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400">    Demanda planejada
+</td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_BIBLIOTECAS</td>
+                    </tr>
+
+
+                <tr id="issuerow334972" rel="334972" data-issuekey="SDBI-1696" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1696" href="https://jira.tic.fgv.br/browse/SDBI-1696">SDBI-1696</a>
+</td>
+                                            <td class="summary"><p>
+                Cubo de Disciplina - 
+    </p>
+</td>
+                                            <td class="assignee">    <em>Sem responsável</em>
+</td>
+                                            <td class="reporter">            Thamires Rodrigues Freitas
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Cancelado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Chamado cancelado.(%%black%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Cancelado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;Chamado cancelado.(%%black%%)&lt;/span&gt;" tabindex="0">Cancelado</span>    </td>
+                                            <td class="created"> 05/06/2024 16:28 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 04/08/2025 10:42 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Análise de dados e Incidentes
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+
+
+                <tr id="issuerow472686" rel="472686" data-issuekey="SDBI-1686" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1686" href="https://jira.tic.fgv.br/browse/SDBI-1686">SDBI-1686</a>
+</td>
+                                            <td class="summary"><p>
+                DASHBOARD SRA - ACESSO FABRICIO.STOCKER E SERGIO.WANDERLEY
+    </p>
+</td>
+                                            <td class="assignee">            Luciana Pereira da Silva
+    </td>
+                                            <td class="reporter">            Elzinara Conceição de Almeida
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 25/07/2025 14:54 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 04/08/2025 09:44 </td>
+                                            <td class="duedate">    28/07/2025
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Projetos e Dashboards -PowerBI
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_SRA</td>
+                    </tr>
+
+
+                <tr id="issuerow473412" rel="473412" data-issuekey="SDBI-1688" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="SDBI-1688" href="https://jira.tic.fgv.br/browse/SDBI-1688">SDBI-1688</a>
+</td>
+                                            <td class="summary"><p>
+                Arquivo para atualização do Cubo mySuite 28-07-25
+    </p>
+</td>
+                                            <td class="assignee">            Gianlucca Devigili
+    </td>
+                                            <td class="reporter">            Vinicius Ferreira Monteiro da Costa
+    </td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-success jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" title="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Fechado&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.(%%green%%)&lt;/span&gt;" tabindex="0">Fechado</span>    </td>
+                                            <td class="created"> 28/07/2025 14:08 </td>
+                                            <td class="customfield_10709"></td>
+                                            <td class="updated"> 01/08/2025 08:54 </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="customfield_13600">
+    
+  	  <div class="rlabs-customfield-viewdialog-object list-view-display" style="display:inline-block" data-mouse-trigger="click" data-key="CONFSD-685147" >
+		  <div class="rlabs-customfield-viewdialog-object-info" title="BI">
+			  <span style="background-image:  url('https://jira.tic.fgv.br/rest/insight/1.0/objecttype/6356/icon.png?size=16'); background-repeat: no-repeat;" class="tinylink"><span style="padding-left: 20px;">BI</span></span>
+		  </div>
+	  </div>
+   </td>
+                                            <td class="customfield_12119">
+					  		    Base de Dados
+		  		    	
+</td>
+                                            <td class="customfield_13400"></td>
+                                            <td class="customfield_13666"></td>
+                                            <td class="labels">    BI_IDE</td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#f5f5f5" colspan="14"><font size="1">
+        Gerado em Tue Aug 26 10:30:33 BRT 2025 por Wanderson Julio de Melo usando Jira 9.12.25#9120025-sha1:62b4d85e419ed49eeb00f21ebe7ccc8e230003f0.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
